@@ -24,76 +24,21 @@ Partial Class GHMain
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         ContextMenuStrip1 = New ContextMenuStrip(components)
-        GHDescLabel = New Label()
-        GHContinueButton = New Button()
-        GHExitButton = New Button()
-        PictureBox1 = New PictureBox()
         plusBtn = New Button()
         minusBtn = New Button()
+        PictureBox1 = New PictureBox()
         pCountLbl = New Label()
+        GHExitButton = New Button()
+        GHContinueButton = New Button()
+        GHDescLabel = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' ContextMenuStrip1
         ' 
+        ContextMenuStrip1.ImageScalingSize = New Size(20, 20)
         ContextMenuStrip1.Name = "ContextMenuStrip1"
         ContextMenuStrip1.Size = New Size(61, 4)
-        ' 
-        ' GHDescLabel
-        ' 
-        GHDescLabel.AutoSize = True
-        GHDescLabel.BorderStyle = BorderStyle.Fixed3D
-        GHDescLabel.Font = New Font("Engravers MT", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GHDescLabel.Location = New Point(41, 306)
-        GHDescLabel.Name = "GHDescLabel"
-        GHDescLabel.Size = New Size(623, 104)
-        GHDescLabel.TabIndex = 3
-        GHDescLabel.Text = "Graveyard Tracker" & vbCrLf & vbCrLf & "Select number of players:"
-        GHDescLabel.TextAlign = ContentAlignment.TopCenter
-        ' 
-        ' GHContinueButton
-        ' 
-        GHContinueButton.BackColor = Color.Black
-        GHContinueButton.FlatAppearance.MouseDownBackColor = Color.DimGray
-        GHContinueButton.FlatAppearance.MouseOverBackColor = Color.Indigo
-        GHContinueButton.FlatStyle = FlatStyle.Popup
-        GHContinueButton.Font = New Font("Engravers MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GHContinueButton.ForeColor = Color.Lime
-        GHContinueButton.Location = New Point(129, 608)
-        GHContinueButton.Name = "GHContinueButton"
-        GHContinueButton.Size = New Size(168, 38)
-        GHContinueButton.TabIndex = 4
-        GHContinueButton.Text = "Continue"
-        GHContinueButton.UseVisualStyleBackColor = False
-        ' 
-        ' GHExitButton
-        ' 
-        GHExitButton.BackColor = Color.Black
-        GHExitButton.FlatAppearance.MouseDownBackColor = Color.DimGray
-        GHExitButton.FlatAppearance.MouseOverBackColor = Color.Indigo
-        GHExitButton.FlatStyle = FlatStyle.Popup
-        GHExitButton.Font = New Font("Engravers MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GHExitButton.ForeColor = Color.Lime
-        GHExitButton.Location = New Point(407, 608)
-        GHExitButton.Name = "GHExitButton"
-        GHExitButton.Size = New Size(168, 38)
-        GHExitButton.TabIndex = 5
-        GHExitButton.Text = "EXIT"
-        GHExitButton.UseVisualStyleBackColor = False
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackColor = Color.Transparent
-        PictureBox1.BackgroundImageLayout = ImageLayout.Center
-        PictureBox1.Image = My.Resources.Resources.gt_icon
-        PictureBox1.InitialImage = My.Resources.Resources.gt_icon
-        PictureBox1.Location = New Point(224, 18)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(256, 256)
-        PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage
-        PictureBox1.TabIndex = 7
-        PictureBox1.TabStop = False
-        PictureBox1.WaitOnLoad = True
         ' 
         ' plusBtn
         ' 
@@ -103,10 +48,10 @@ Partial Class GHMain
         plusBtn.FlatAppearance.MouseOverBackColor = Color.Indigo
         plusBtn.FlatStyle = FlatStyle.Popup
         plusBtn.Font = New Font("Engravers MT", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        plusBtn.Location = New Point(407, 454)
+        plusBtn.Location = New Point(636, 559)
         plusBtn.Name = "plusBtn"
         plusBtn.Size = New Size(168, 110)
-        plusBtn.TabIndex = 9
+        plusBtn.TabIndex = 16
         plusBtn.Text = "▲"
         plusBtn.UseVisualStyleBackColor = False
         ' 
@@ -118,31 +63,87 @@ Partial Class GHMain
         minusBtn.FlatAppearance.MouseOverBackColor = Color.Indigo
         minusBtn.FlatStyle = FlatStyle.Popup
         minusBtn.Font = New Font("Engravers MT", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        minusBtn.Location = New Point(129, 454)
+        minusBtn.Location = New Point(181, 559)
         minusBtn.Name = "minusBtn"
         minusBtn.Size = New Size(168, 110)
-        minusBtn.TabIndex = 8
+        minusBtn.TabIndex = 15
         minusBtn.Text = "▼"
         minusBtn.UseVisualStyleBackColor = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Transparent
+        PictureBox1.BackgroundImageLayout = ImageLayout.Center
+        PictureBox1.Image = My.Resources.Resources.gt_icon
+        PictureBox1.InitialImage = My.Resources.Resources.gt_icon
+        PictureBox1.Location = New Point(376, 118)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(256, 256)
+        PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage
+        PictureBox1.TabIndex = 14
+        PictureBox1.TabStop = False
+        PictureBox1.WaitOnLoad = True
         ' 
         ' pCountLbl
         ' 
         pCountLbl.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         pCountLbl.BorderStyle = BorderStyle.Fixed3D
         pCountLbl.Font = New Font("Engravers MT", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        pCountLbl.Location = New Point(310, 487)
+        pCountLbl.Location = New Point(408, 559)
         pCountLbl.Name = "pCountLbl"
-        pCountLbl.Size = New Size(84, 45)
-        pCountLbl.TabIndex = 6
-        pCountLbl.Text = "10"
+        pCountLbl.Size = New Size(168, 110)
+        pCountLbl.TabIndex = 13
+        pCountLbl.Text = "0"
         pCountLbl.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' GHExitButton
+        ' 
+        GHExitButton.BackColor = Color.Black
+        GHExitButton.FlatAppearance.MouseDownBackColor = Color.DimGray
+        GHExitButton.FlatAppearance.MouseOverBackColor = Color.Indigo
+        GHExitButton.FlatStyle = FlatStyle.Popup
+        GHExitButton.Font = New Font("Engravers MT", 13.8F, FontStyle.Bold)
+        GHExitButton.ForeColor = Color.Lime
+        GHExitButton.Location = New Point(629, 876)
+        GHExitButton.Name = "GHExitButton"
+        GHExitButton.Size = New Size(175, 38)
+        GHExitButton.TabIndex = 12
+        GHExitButton.Text = "EXIT"
+        GHExitButton.UseVisualStyleBackColor = False
+        ' 
+        ' GHContinueButton
+        ' 
+        GHContinueButton.BackColor = Color.Black
+        GHContinueButton.FlatAppearance.MouseDownBackColor = Color.DimGray
+        GHContinueButton.FlatAppearance.MouseOverBackColor = Color.Indigo
+        GHContinueButton.FlatStyle = FlatStyle.Popup
+        GHContinueButton.Font = New Font("Engravers MT", 13.8F, FontStyle.Bold)
+        GHContinueButton.ForeColor = Color.Lime
+        GHContinueButton.Location = New Point(181, 876)
+        GHContinueButton.Name = "GHContinueButton"
+        GHContinueButton.Size = New Size(175, 38)
+        GHContinueButton.TabIndex = 11
+        GHContinueButton.Text = "Continue"
+        GHContinueButton.UseVisualStyleBackColor = False
+        ' 
+        ' GHDescLabel
+        ' 
+        GHDescLabel.AutoSize = True
+        GHDescLabel.BorderStyle = BorderStyle.Fixed3D
+        GHDescLabel.Font = New Font("Engravers MT", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GHDescLabel.Location = New Point(181, 377)
+        GHDescLabel.Name = "GHDescLabel"
+        GHDescLabel.Size = New Size(623, 104)
+        GHDescLabel.TabIndex = 10
+        GHDescLabel.Text = "Graveyard Tracker" & vbCrLf & vbCrLf & "Select number of players:"
+        GHDescLabel.TextAlign = ContentAlignment.TopCenter
         ' 
         ' GHMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Desktop
-        ClientSize = New Size(704, 681)
+        ClientSize = New Size(984, 961)
         Controls.Add(plusBtn)
         Controls.Add(minusBtn)
         Controls.Add(PictureBox1)
@@ -160,11 +161,11 @@ Partial Class GHMain
         PerformLayout()
     End Sub
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents GHDescLabel As Label
-    Friend WithEvents GHContinueButton As Button
-    Friend WithEvents GHExitButton As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents plusBtn As Button
     Friend WithEvents minusBtn As Button
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents pCountLbl As Label
+    Friend WithEvents GHExitButton As Button
+    Friend WithEvents GHContinueButton As Button
+    Friend WithEvents GHDescLabel As Label
 End Class
